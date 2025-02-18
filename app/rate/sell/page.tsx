@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import { useState } from "react";
 import Dropdown from "@/components/dropdown/page";
@@ -24,6 +24,13 @@ interface CurrencyAsset {
   title: string;
   icon: string;
 }
+
+interface SelectItem {
+  icon?: string;
+  title: string;
+  abs?: string;
+}
+
 
 const Sell = () => {
   const [selectedCrypto, setSelectedCrypto] = useState<CryptoAsset | null>(null);
@@ -51,9 +58,13 @@ const Sell = () => {
     setPriceRange([]);
   };
 
-  const handleCurrency = (item: CurrencyAsset) => {
-    setSelectedCurrency(item);
+  const handleCurrency = (item: SelectItem) => {
+    if (item.icon) {
+      setSelectedCurrency(item as CurrencyAsset);  // Cast when needed
+    }
   };
+  
+  
 
   const handleType = (item: CardTypeAsset) => {
     setSelectedType(item);

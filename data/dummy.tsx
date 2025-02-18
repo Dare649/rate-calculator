@@ -172,34 +172,44 @@ export const table = [
 
 export const card = [
     {
-        title: 'amazon'
+        title: 'amazon',
+        abs: ''
     },
     {
-        title: 'american express'
+        title: 'american express',
+        abs: ''
     },
     {
-        title: 'apple store slow'
+        title: 'apple store slow',
+        abs: ''
     },
     {
-        title: 'best buy'
+        title: 'best buy',
+        abs: ''
     },
     {
-        title: 'coach'
+        title: 'coach',
+        abs: ''
     },
     {
-        title: 'ebay'
+        title: 'ebay',
+        abs: ''
     },
     {
-        title: 'footlocker'
+        title: 'footlocker',
+        abs: ''
     },
     {
-        title: 'google play'
+        title: 'google play',
+        abs: ''
     },
     {
-        title: 'itunes'
+        title: 'itunes',
+        abs: ''
     },
     {
-        title: 'macy'
+        title: 'macy',
+        abs: ''
     },
     
 ]

@@ -7,7 +7,7 @@ import Select from "@/components/select/page";
 
 interface CryptoAsset {
   title: string;
-  icon: string;
+  icon?: string | undefined;
   abs: string;
   chg?: number;
 }
@@ -22,9 +22,15 @@ interface CardTypeAsset {
 
 interface CurrencyAsset {
   title: string;
-  icon: string;
+  icon?: string;
   abs: string;
 }
+
+interface SelectItem {
+  title: string;
+  icon?: string;
+}
+
 
 const Buy = () => {
   const [selectedCrypto, setSelectedCrypto] = useState<CryptoAsset | null>(null);
@@ -53,11 +59,18 @@ const Buy = () => {
     setUnit(1);
   };
 
-  const handleCurrency = (item: CurrencyAsset) => {
-    setSelectedCurrency(item);
+  const handleCurrency = (item: SelectItem) => {
+    const currency: CurrencyAsset = {
+      title: item.title,
+      icon: item.icon || "", // Ensuring icon is always a string
+      abs: (item as any).abs || "", // Ensure `abs` is correctly mapped
+    };
+    setSelectedCurrency(currency);
     setSelectedValue(null);
     setUnit(1);
   };
+  
+  
 
   const handleValueSelect = (value: number) => {
     setSelectedValue(value);
@@ -82,13 +95,7 @@ const Buy = () => {
           </div>
           <div className="flex-1 lg:py-3 sm:py-1 flex-grow w-full">
             <h2 className="capitalize text-secondary-2 font-[16px] lg:text-base sm:text-md">Gift card</h2>
-            <Dropdown
-              data={card}
-              onSelect={handleCard}
-              placeholder="Search for gift"
-              text="Select a gift card"
-              disableInput={!selectedCrypto}
-            />
+            <Dropdown<CryptoAsset> data={crypto} onSelect={handleSelect} placeholder="Search for an asset" text="Select an asset" />
           </div>
         </div>
 
@@ -103,6 +110,7 @@ const Buy = () => {
               text="Select currency"
               disabled={!selectedCard}
             />
+
           </div>
           {selectedValue && (
             <div className="lg:w-[30%] sm:w-full">

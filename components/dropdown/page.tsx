@@ -4,31 +4,33 @@ import React, { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 interface DropdownItem {
+  title?: string;
   icon?: string;
-  title: string;
   abs?: string;
+  chg?: number;
 }
 
-interface DropdownProps {
-  data?: DropdownItem[];
-  onSelect: (item: DropdownItem) => void;
+
+interface DropdownProps<T> {
+  data?: T[];
+  onSelect: (item: T) => void;
   placeholder?: string;
   text?: string;
-  disableInput?: boolean; // New prop to control input disable state
+  disableInput?: boolean;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({
+const Dropdown = <T extends { title: string; icon?: string; abs: string }>({
   data = [],
   onSelect,
   placeholder = "Search...",
   text = "",
-  disableInput = false, // Default to false
-}) => {
-  const [selectedItem, setSelectedItem] = useState<DropdownItem | null>(null);
+  disableInput = false,
+}: DropdownProps<T>) => {
+  const [selectedItem, setSelectedItem] = useState<T | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const handleSelect = (item: DropdownItem) => {
+  const handleSelect = (item: T) => {
     setSelectedItem(item);
     onSelect(item);
     setIsDropdownOpen(false);
