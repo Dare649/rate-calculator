@@ -30,7 +30,7 @@ const Crypto = () => {
     <div className="w-full">
       <form className="w-full"> 
         {/* FROM & TO SELECTION */}
-        <div className="flex lg:flex-row sm:flex-col items-center lg:gap-x-3">
+        <div className="flex lg:flex-row sm:flex-col items-center gap-1">
           {/* FROM */}
           <div className="flex-1 w-full">
             <h2 className="capitalize lg:pb-[8px] text-secondary-2 font-[16px] lg:text-base sm:text-md">From</h2>
@@ -38,8 +38,8 @@ const Crypto = () => {
           </div>
 
           {/* SWAP ICON */}
-          <div className="w-16 h-16 rounded-full bg-primary-2 flex items-center justify-center mt-7">
-            <BsArrowDownUp size={25} className="text-primary-1" />
+          <div className="lg:w-8 lg:h-8 sm:w- rounded-full bg-primary-2 flex items-center justify-center mt-7">
+            <BsArrowDownUp className="text-primary-1" />
           </div>
 
           {/* TO */}

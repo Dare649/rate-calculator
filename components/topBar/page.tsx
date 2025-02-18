@@ -53,8 +53,6 @@ const TopBar = () => {
                 ))}
               </div>
             </div>
-
-            {/* Login and Button */}
             <div className="flex lg:space-x-[40px] items-center">
               <h2 className="capitalize font-bold text-[16px]">login</h2>
               <button className="bg-primary-1 rounded-lg text-white lg:px-[24px] lg:py-[17px] text-[16px] cursor-pointer">
@@ -78,6 +76,11 @@ const TopBar = () => {
           />
           <div onClick={handleOpenMenu}>
             <IoMenuOutline size={40} className="cursor-pointer" />
+          </div>
+        </div>
+        <div className="hidden sm:flex w-full">
+          <div className="z-50 fixed bottom-0 bg-primary-1 w-full text-white text-center py-8 first-letter:capitalize font-bold text-md">
+              open an account
           </div>
         </div>
       </div>
