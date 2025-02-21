@@ -86,7 +86,7 @@ const Sell = () => {
       <form className="w-full">
         <div className="w-full flex lg:flex-row sm:flex-col items-center gap-3">
           <div className="flex-1 lg:py-3 sm:py-1 w-full">
-            <h2 className="capitalize text-secondary-2 font-[16px] ">Receive payment in</h2>
+            <h2 className="capitalize text-secondary-1 font-[16px] ">Receive payment in</h2>
             <Dropdown 
               data={crypto} 
               onSelect={handleSelect} 
@@ -95,7 +95,7 @@ const Sell = () => {
             />
           </div>
           <div className="flex-1 lg:py-3 sm:py-1 flex-grow w-full">
-            <h2 className="capitalize text-secondary-2 font-[16px] ">Gift card</h2>
+            <h2 className="capitalize text-secondary-1 font-[16px] ">Gift card</h2>
             <Dropdown 
               data={card} 
               onSelect={handleCard} 
@@ -107,7 +107,7 @@ const Sell = () => {
         </div>
         <div className="w-full flex lg:flex-row sm:flex-col items-center gap-3">
           <div className="flex-1 lg:py-3 sm:py-1 w-full">
-            <h2 className="capitalize text-secondary-2 font-[16px] ">Currency</h2>
+            <h2 className="capitalize text-secondary-1 font-[16px] ">Currency</h2>
             <Select 
               data={currency} 
               onSelect={handleCurrency} 
@@ -117,7 +117,7 @@ const Sell = () => {
             />
           </div>
           <div className="flex-1 lg:py-3 sm:py-1 flex-grow w-full">
-            <h2 className="capitalize text-secondary-2 font-[16px] lg:text-base sm:text-md">Card type</h2>
+            <h2 className="capitalize text-secondary-1 font-[16px] lg:text-base sm:text-md">Card type</h2>
             <Select 
               data={cardType} 
               onSelect={handleType} 
@@ -129,10 +129,10 @@ const Sell = () => {
         </div>
         {priceRange.length > 0 && (
           <div className="w-full">
-            <h2 className="capitalize text-secondary-2 font-[16px] lg:text-base sm:text-md">Gift card value</h2>
+            <h2 className="capitalize text-secondary-1 font-[16px] lg:text-base sm:text-md">Gift card value</h2>
             <div className="w-full flex lg:flex-row sm:flex-col items-center gap-3">
               <div className="lg:w-[70%] sm:w-full lg:px-2 sm:px-1 border-2 rounded-lg flex flex-col border-primary-1">
-                <p className="capitalize text-secondary-2 font-[12px] lg:text-base sm:text-md">Enter amount:</p>
+                <p className="capitalize text-secondary-1 font-[12px] lg:text-base sm:text-md">Enter amount:</p>
                 <div className="flex items-center w-full lg:py-2 sm:py-1 text-lg">
                   <input
                     type="number"
@@ -151,31 +151,31 @@ const Sell = () => {
                 </div>
               </div>
               <div className="lg:w-[30%] sm:w-full border-2 rounded-lg flex border-primary-1">
-                <button type="button" onClick={() => handleAmountChange("decrease")} className="border-r-2 sm:py-5 lg:py-[21.5%] w-[30%] border-primary-3">-</button>
+                <button type="button" onClick={() => handleAmountChange("decrease")} className="border-r-2 sm:py-5 lg:py-7 w-[30%] border-primary-3">-</button>
                 <input
                   type="number"
                   value={unit}
-                  className="text-center bg-transparent outline-none sm:py-5 lg:py-[21.5%] w-[30%]"
+                  className="text-center bg-transparent outline-none sm:py-5 lg:py-7 w-[30%]"
                   readOnly
                 />
-                <button type="button" onClick={() => handleAmountChange("increase")} className="border-l-2 sm:py-5 lg:py-[21.5%] w-[30%] border-primary-3">+</button>
+                <button type="button" onClick={() => handleAmountChange("increase")} className="border-l-2 sm:py-5 lg:py-7 w-[30%] border-primary-3">+</button>
               </div>
             </div>
           </div>
         )}
         {selectedCrypto && selectedCurrency && amount !== null && (
-          <div className="lg:p-[15px] mt-3 bg-primary-2 rounded-2xl flex flex-col sm:p-3">
+          <div className="lg:p-[15px] mt-3 bg-primary-1/50 rounded-2xl flex flex-col sm:p-3">
             <div className="flex justify-between">
               <h2 className="font-bold capitalize text-secondary-1 lg:text-base sm:text-md">Rate</h2>
               <h2 className="flex items-center gap-x-2">
-                <span className="uppercase text-primary-4 font-bold lg:text-base sm:text-md">1 {selectedCrypto.abs}</span>
+                <span className="uppercase text-secondary-1 font-bold lg:text-base sm:text-md">1 {selectedCrypto.abs}</span>
                 <span>/</span>
-                <span className="uppercase text-primary-4 font-bold">{selectedCurrency.title}</span>
+                <span className="uppercase text-secondary-1 font-bold">{selectedCurrency.title}</span>
               </h2>
             </div>
             <div className="flex justify-between mt-2">
               <h2 className="font-bold capitalize text-secondary-1 lg:text-base sm:text-md">Total Payout</h2>
-              <h2 className="uppercase text-primary-4 font-bold">{selectedCrypto.abs} {amount}</h2>
+              <h2 className="uppercase text-secondary-1 font-bold">{selectedCrypto.abs} {amount}</h2>
             </div>
           </div>
         )}

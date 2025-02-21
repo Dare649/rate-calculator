@@ -4,9 +4,8 @@
 @theme {
 
   /* font family */
-  --font-primary: "Poppins", "Open Sans", serif;
-  --font-secondary: "U8", "Poppins", "Oswald";
-
+  --font-primary: "Satoshi";
+ 
   /* screen size */
   --breakpoint-sm: 320px;
   --breakpoint-md: 768px;
@@ -14,22 +13,33 @@
 
 
   /* color */
-  --color-primary-1: #fd7d31;
-  --color-primary-2: #FFEFDB;
-  --color-primary-3: #797b89;
-  --color-primary-4: #383a47;
-  --color-primary-5: #a0a0a2;
-  --color-primary-6: #f2f2f2;
-  --color-primary-7: #fff5e1;
-
-  --color-secondary-1: #88888A;
-  --color-secondary-2: #1B1C20;
-  --color-secondary-3: #6b7280;
-  --color-secondary-4: #111827;
+  --color-primary-1: #d46cf5;
 
 
-  --color-green-1: #22C55E;
+  --color-secondary-1: #27014f;
 
-  --color-red-1: #F75555;
 
+}
+
+
+.custom-scrollbar-container {
+  /* Set overflow to auto to enable scrollbar */
+  overflow: auto;
+}
+
+.custom-scrollbar-container::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+  height: 0; /* Hide the horizontal scrollbar */
+}
+
+.custom-scrollbar-container:hover::-webkit-scrollbar-thumb {
+  background-color: #94A3BB/50; /* Color of the scrollbar thumb */
+}
+
+.custom-scrollbar-container::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Make the scrollbar thumb transparent by default */
+}
+
+.custom-scrollbar-container:hover::-webkit-scrollbar-thumb {
+  background-color: #94A3BB/50; /* Change the scrollbar thumb color on hover */
 }

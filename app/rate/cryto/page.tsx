@@ -33,18 +33,18 @@ const Crypto = () => {
         <div className="flex lg:flex-row sm:flex-col items-center gap-1">
           {/* FROM */}
           <div className="flex-1 w-full">
-            <h2 className="capitalize lg:pb-[8px] text-secondary-2 font-[16px] lg:text-base sm:text-md">From</h2>
+            <h2 className="capitalize lg:pb-[8px] text-secondary-1 font-[16px] lg:text-base sm:text-md">From</h2>
             <Dropdown data={crypto} onSelect={handleSelectFrom} placeholder="Search for an asset" text="Select an asset"/>
           </div>
 
           {/* SWAP ICON */}
-          <div className="lg:w-8 lg:h-8 sm:w- rounded-full bg-primary-2 flex items-center justify-center mt-7">
-            <BsArrowDownUp className="text-primary-1" />
+          <div className="lg:w-8 lg:h-8 sm:w- rounded-full bg-primary-1 flex items-center justify-center mt-7">
+            <BsArrowDownUp className="text-white font-bold" />
           </div>
 
           {/* TO */}
           <div className="flex-1 w-full">
-            <h2 className="capitalize lg:pb-[8px] text-secondary-2 font-[16px] lg:text-base sm:text-md">To</h2>
+            <h2 className="capitalize lg:pb-[8px] text-secondary-1 font-[16px] lg:text-base sm:text-md">To</h2>
             <Dropdown data={crypto} onSelect={handleSelectTo} placeholder="Search for an asset" text="Select an asset"/>
           </div>
         </div>
@@ -86,15 +86,15 @@ const Crypto = () => {
         {/* SEPARATOR & RATE SECTION (ONLY SHOW IF AMOUNT IS FILLED) */}
         {amount !== null && amount > 0 && fromAsset && toAsset && (
           <>
-            <hr className="w-full bg-primary-3 h-1 opacity-10 mt-3" />
+            <hr className="w-full bg-secondary-1 h-1 opacity-10 mt-3" />
 
             {/* RATE SECTION */}
-            <div className="lg:p-[15px] sm:p-3 mt-3 bg-primary-2 rounded-2xl flex items-center justify-between w-full">
+            <div className="lg:p-[15px] sm:p-3 mt-3 bg-primary-1 rounded-2xl flex items-center justify-between w-full">
               <h2 className="font-bold capitalize text-secondary-1 lg:text-base sm:text-md">Rate</h2>
               <h2 className="flex items-center gap-x-2">
-                <span className="uppercase text-primary-4 font-bold lg:text-base sm:text-md">1 {fromAsset.abs}</span>
+                <span className="uppercase text-secondary-1 font-bold lg:text-base sm:text-md">1 {fromAsset.abs}</span>
                 <span>=</span>
-                <span className="uppercase text-primary-4 font-bold lg:text-base sm:text-md">1 {toAsset.abs}</span>
+                <span className="uppercase text-secondary-1 font-bold lg:text-base sm:text-md">1 {toAsset.abs}</span>
               </h2>
             </div>
           </>
