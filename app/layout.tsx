@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-primary">
-        <main>
+        <main className="sm:p-3 lg:p-0">
           {children}
         </main>
       </body>

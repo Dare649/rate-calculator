@@ -89,11 +89,11 @@ const Buy = () => {
         {/* Pay with */}
         <div className="w-full flex lg:flex-row sm:flex-col items-center gap-3">
           <div className="flex-1 lg:py-3 sm:py-1 w-full">
-            <h2 className="capitalize text-primary-1 font-[16px] lg:text-base sm:text-md">pay with</h2>
+            <h2 className="capitalize text-secondary-1 font-[16px] lg:text-base sm:text-md">pay with</h2>
             <Dropdown data={crypto} onSelect={handleSelect} placeholder="Search for an asset" text="Select an asset" />
           </div>
           <div className="flex-1 lg:py-3 sm:py-1 flex-grow w-full">
-            <h2 className="capitalize text-primary-1 font-[16px] lg:text-base sm:text-md">Gift card</h2>
+            <h2 className="capitalize text-secondary-1 font-[16px] lg:text-base sm:text-md">Gift card</h2>
             {/* Updated to use handleCard */}
             <Dropdown<CardAsset> data={card} onSelect={handleCard} placeholder="Select a gift card" text="Choose a gift card" />
           </div>
@@ -102,7 +102,7 @@ const Buy = () => {
         {/* Currency and No of Cards */}
         <div className="w-full flex lg:flex-row sm:flex-col items-center gap-3">
           <div className={`transition-all duration-300 ${selectedValue ? "lg:w-[70%]" : "w-full"} sm:w-full`}>
-            <h2 className="capitalize text-primary-1 font-[16px] lg:text-base sm:text-md">card currency</h2>
+            <h2 className="capitalize text-secondary-1 font-[16px] lg:text-base sm:text-md">card currency</h2>
             <Select
               data={currency}
               onSelect={handleCurrency}
@@ -113,7 +113,7 @@ const Buy = () => {
           </div>
           {selectedValue && (
             <div className="lg:w-[30%] sm:w-full">
-              <h2 className="capitalize text-primary-1 font-[16px] lg:text-base sm:text-md">no of cards</h2>
+              <h2 className="capitalize text-secondary-1 font-[16px] lg:text-base sm:text-md">no of cards</h2>
               <div className="w-full border-2 rounded-lg flex border-primary-1">
                 <button
                   type="button"
@@ -143,7 +143,7 @@ const Buy = () => {
         {/* Gift Card Value Selection */}
         {selectedCurrency && (
           <div className="w-full mt-3">
-            <h2 className="capitalize text-primary-1 font-[16px] lg:text-base sm:text-md">Gift card value</h2>
+            <h2 className="capitalize text-secondary-1 font-[16px] lg:text-base sm:text-md">Gift card value</h2>
             <div className="w-full grid lg:grid-cols-4 sm:grid-cols-2 gap-3 text-secondary-1">
               {giftCardValues.map((value) => (
                 <button

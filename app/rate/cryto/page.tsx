@@ -38,7 +38,7 @@ const Crypto = () => {
           </div>
 
           {/* SWAP ICON */}
-          <div className="lg:w-8 lg:h-8 sm:w- rounded-full bg-primary-1 flex items-center justify-center mt-7">
+          <div className="lg:w-8 lg:h-8 sm:w-14 sm:h-14 rounded-full bg-primary-1 flex items-center justify-center lg:mt-7 sm:mt-3">
             <BsArrowDownUp className="text-white font-bold" />
           </div>
 

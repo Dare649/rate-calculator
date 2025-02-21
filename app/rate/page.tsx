@@ -8,13 +8,16 @@ const RateCalculator = () => {
   return (
     <section className="w-full h-screen flex">
       {/* Static 40% width section */}
-      <div className="lg:w-[40%] sm:w-0 bg-primary-1 h-full flex-shrink-0 bg-[url(https://apexnetwork.co/_nuxt/backgroundpattern.015223cf.svg)]">
-        <div className='fixed bottom-[10%] ml-[15%]'>
+      <div className="lg:w-[40%] sm:hidden lg:flex bg-primary-1 h-full flex-shrink-0 bg-[url(https://apexnetwork.co/_nuxt/backgroundpattern.015223cf.svg)]">
+        <div className='fixed bottom-[10%] lg:ml-[8%]'>
           <h2 className='capitalize font-bold tracking-wider leading-relaxed text-white text-[20px]'>trade your giftcards & crypto</h2>
           <h1 className='py-3 font-bold capitalize text-gray-300 text-[36px]'>easy with speed</h1>
-          <p className="text-[#ffffff] text-base font-aeonikregular text-start mt-4 tracking-wide w-[38%]">Start trading now to enjoy the best rates. We provide the best and fastest service across the world in swapping e-currencies.</p>
+          <p className="text-[#ffffff] text-base font-aeonikregular text-start mt-4 tracking-wide w-[38%]">
+            Start trading now to enjoy the best rates. We provide the best and fastest service across the world in swapping e-currencies.
+          </p>
         </div>
       </div>
+
 
       {/* Scrollable 60% width section */}
       <div className="lg:w-[60%] sm:w-full bg-white lg:px-20 sm:px-3 sm:py-0 lg:py-10 overflow-y-auto custom-scrollbar-container h-full">
@@ -42,7 +45,7 @@ const RateCalculator = () => {
         </div>
 
         <div className="w-full lg:py-10 sm:py-5">
-          <button className="w-full bg-primary-1 text-white font-bold capitalize py-5">
+          <button className="w-full cursor-pointer bg-primary-1 text-white font-bold capitalize py-5">
             Continue on WhatsApp
           </button>
         </div>
